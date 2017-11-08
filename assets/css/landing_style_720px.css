@@ -1,0 +1,123 @@
+h2{
+	margin-top: 50px;
+	font-size: 30px;
+}
+
+/****************HEADER*/
+.main_logo{
+    margin-top: 10px;
+    width: 100px;
+}
+
+.propagande{
+	font-size: 40px;
+}
+form{
+	margin-top: 100px;
+	position: relative;
+}
+form label{
+	font-size: 30px;
+}
+.main_nav li{
+	display: inline-block;
+	font-family: 'Josefin-SemiBold';
+	font-size: 15px;
+	margin-right: 30px;
+}
+[name="email"]{
+/*	margin-top: 20px;
+	color: rgb(139,161,213);
+	background-color: rgb(59,92,170);*/
+	width: 80%;
+	height: 80px;
+/*	border-radius: 10px;
+	font-size: 34px;
+	text-align: center;
+	border: none;*/
+}
+#inscription_button{
+	/*margin-top:30px;*/
+	padding: 15px;
+	/*font-family: 'LemonMilk';*/
+	/*border-radius: 10px;*/
+/*	font-size: 24px;
+	color: rgb(255,213,79);
+	background-color: rgb(59,92,170);
+	border: none;*/
+}
+/*#inscription_button:hover{
+	background-color: rgb(255,213,79);
+	color: rgb(59,92,170);
+	cursor: pointer;
+}
+*/
+
+/**************UNIVERSE*/
+
+#universe{
+	height: 350px;
+}
+.universe_content div{
+	top: 0;
+	font-size: 20px;
+}
+
+/***************GAME*/
+#game article{
+	font-size: 30px;
+}
+.cards, .chicken{
+	width: 100%;
+	display: block;
+	height: 660px;
+}
+
+/*************** CARDS*/
+
+.cartes_descriptives{
+	width: 80%;
+}
+.cards .text{
+	margin: 0 50px 0 50px;
+}
+/*************** CHICKEN*/
+.poule_facette{
+	width: 80%;
+}
+.chicken .text{
+	margin: 0px 50px 0 50px;
+	padding-top: 50px;
+}
+
+
+/*************TEAM******************/
+#team{
+	height: 500px;
+}
+.team_container{
+	height: 200px;
+	margin:auto;
+	/*border:1px solid black;*/
+}
+.logo_team6{
+	width: 100px;
+}
+
+/*************   FOOTER   ******************/
+
+.logo_t6{
+	width: 40px;
+}
+.tous_droits_reserves{
+	height: 20px;
+	left: 45px;
+}
+.logo_resaux_sociaux{
+	height: 30px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.logo_container{
+	right: 5px;
+}

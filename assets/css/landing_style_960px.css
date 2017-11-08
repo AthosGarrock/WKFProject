@@ -1,0 +1,63 @@
+
+h2{
+	margin-top: 50px;
+	font-size: 40px;
+}
+#universe{
+	height: 450px;
+}
+.universe_content div{
+	font-size: 25px;
+}
+
+/*************** GAME*/
+
+#game article{
+	font-size: 20px;
+}
+.cards, .chicken{
+	height: 500px;
+}
+/*************** CARDS*/
+.cartes_descriptives{
+	width: 380px;
+}
+.cards .text{
+	margin: 0 50px 0 50px;
+}
+/*************** CHICKEN*/
+.poule_facette{
+	width: 350px;
+}
+.chicken .text{
+	margin: 50px 50px 0 50px;
+}
+/*************TEAM******************/
+
+#team{
+	height: 700px;
+}
+.team_container{
+	height: 300px;
+}
+.logo_team6{
+	width: 150px;
+}
+
+/*************   FOOTER   ******************/
+
+.logo_t6{
+	width: 60px;
+}
+.tous_droits_reserves{
+	height:25px;
+	left: 70px;
+}
+.logo_resaux_sociaux{
+	height: 40px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.logo_container{
+	right: 30px;
+}

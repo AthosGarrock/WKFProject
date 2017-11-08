@@ -1,0 +1,219 @@
+*, *::after, *::before
+{
+    box-sizing: border-box;
+}
+body
+{
+    position: relative;
+    background-color: rgb(23,37,76);
+    overflow: hidden;
+}
+
+/****************/
+/*    BOARD     */
+/****************/
+
+
+#main
+{
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 50%;
+    -webkit-transform: translate(-50%, -1%);
+    -moz-transform: translate(-50%, -1%);
+    -ms-transform: translate(-50%, -1%);
+    -o-transform: translate(-50%, -1%);
+    transform: translate(-50%, -1%);
+}
+#board
+{
+    max-width: 100vw;
+    max-height: 100vh;
+}
+section
+{
+    position: absolute;
+    height:50%;
+    width: 100%;
+    border: solid 1px red;
+}
+#playerTop
+{
+    top: 0;
+}
+#playerBot
+{
+    bottom: 0;
+}
+
+/****************/
+/*   MANA BAR   */
+/****************/
+
+.manaBar
+{
+    position: absolute;
+    width: 30%;
+    height: 15%;
+    background: url("../images/board/mana_bar2.png") no-repeat;
+    background-size: 100%;
+    padding-top: 1.3%;
+    padding-left: 1.7%;
+    padding-right: 1.7%;
+    display: flex;
+    justify-content:space-between;
+}
+.topMana
+{
+    left: 6%;
+    top: 12%;
+}
+.botMana
+{
+    right: 7%;
+    bottom: 12%;
+}
+
+.manaOn
+{
+    width: 8%;
+    height: 80%;
+    background: url("../images/board/mana.png") no-repeat;
+    background-size: 100%;
+}
+.manaOff
+{
+    width: 8%;
+    height: 80%;
+    background: url("../images/board/empty_mana.png") no-repeat;
+    background-size: 100%;
+}
+
+/****************/
+/*     HAND     */
+/****************/
+
+.hand
+{
+    position: absolute;
+    width: 28%;
+    height: 32%;
+    background: transparent;
+    border: solid 1px red;
+}
+.topHand
+{
+    right: 12%;
+    top: 15%;
+}
+.botHand
+{
+    left: 12%;
+    bottom: 15%;
+}
+
+
+/****************/
+/*   PORTRAIT   */
+/****************/
+
+.portrait
+{
+    position: absolute;
+    width: 14%;
+    height: 42%;
+    background: url("../images/board/robin.png") no-repeat;
+    background-size: 100%;
+}
+.topPortrait
+{
+    left: 43%;
+    top: 9%;
+}
+.botPortrait
+{
+    right: 43%;
+    bottom: 10%;
+}
+
+/*******************/
+/*   BATTLEFIELD   */  /* NON pas le jeu !!! */
+/*******************/
+
+.field
+{
+    position: absolute;
+    width: 94%;
+    height: 40%;
+    background: transparent;
+    border: solid 1px red;
+    padding-left: 0.3%;
+    display: flex;
+    justify-content: space-between;
+}
+.topField
+{
+    right: 3%;
+    top: 55%;
+}
+.botField
+{
+    left: 3%;
+    bottom: 55%;
+}
+
+/****************/
+/*     CARD     */
+/****************/
+
+.creature
+{
+    position: relative;
+    width: 10.2%;
+    height: 100%;
+    border: solid 1px red;
+    background: url("../images/card/creature_card.png") no-repeat,
+    url("../images/card/picture/fievre.png") rgb(67,91,166) no-repeat;
+    background-size: 100%;
+    /*display: inline-block;*/
+}
+.description
+{
+    position: absolute;
+    bottom: -20%;
+    left: 9%;
+    font-size: 30%;
+}
+.cardLife
+{
+    position: absolute;
+    bottom: 36%;
+    left: 12%;
+    color: rgb(183, 31, 30);
+    font-size: 77%;
+}
+.atk
+{
+    position: absolute;
+    bottom: -29%;
+    left: 13%;
+    color: rgb(249, 177, 20);
+    font-size: 77%;
+}
+.manaCost
+{
+    position: absolute;
+    top: 0%;
+    left: 11%;
+    color: rgb(8, 132, 144);
+    font-size: 77%;
+}
+.manaCostShadow
+{
+    position: absolute;
+    top: 1%;
+    left: 11.5%;
+    color: rgb(0, 96, 100);
+    font-size: 77%;
+}

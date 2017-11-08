@@ -1,0 +1,49 @@
+#universe{
+	height: 600px;
+}
+
+.universe_content div{
+	font-size: 30px;
+}
+
+#game article{
+	font-size: 30px;
+}
+
+.cards, .chicken{
+	height: 750px;
+}
+
+/**************CARDS*/
+.cartes_descriptives{
+	width: 460px;
+}
+.cards .text{
+	margin: 0 100px 0 100px;
+}
+/**************CHICKEN*/
+.poule_facette{
+	width: 430px;
+}
+
+.chicken .text{
+	margin: 100px 100px 0 100px;
+}
+/*************   TEAM   ******************/
+.logo_team6{
+	width: 200px;
+}
+
+/*************   FOOTER   ******************/
+.logo_t6{
+	width: 80px;
+}
+.tous_droits_reserves{
+	height:30px;
+	left: 90px;
+}
+.logo_resaux_sociaux{
+	height: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
+}

@@ -1,0 +1,166 @@
+.test{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	position: absolute;
+	z-index: 10;
+	font-size: 1px;
+
+
+}
+.test input{
+	text-align: center;
+}	
+.test .connectionContainer{
+	background-color: rgb(255,213,79);
+	width: 70vh;
+	height: 42vh;	
+
+	margin: 0 auto;
+	border-radius: 24px;
+	top:2%;	
+}
+.test .formulaireContainer{
+	background-color: rgb(255,213,79);
+	width: 80vh;
+	height: 73vh;	
+
+	margin: 0 auto;
+	border-radius: 24px;
+}
+
+.test form{
+	height: 66vh;
+	margin-top: 15vh;
+	position: relative;
+}
+
+/* form label{
+	font-family: 'LemonMilk';
+	font-size: 30px;
+	color: rgb(59,92,170);
+} */
+.test .formulaireContainer form [name="a_firstname"],.test .formulaireContainer form [name="a_lastname"],.test .formulaireContainer form [name="a_username"],.test .formulaireContainer form [name="a_email"],.test .formulaireContainer form [name="a_password"],.test .formulaireContainer form [name="a_passwordConf"],.test .formulaireContainer form [name='a_newsletter'],.test .connectionContainer form [name="a_username"],.test .connectionContainer form [name="a_password"]{
+	margin-top: 3vh;
+	color: rgb(139,161,213);
+	background-color: rgb(59,92,170);
+	width: 65vh;
+	height: 5vh;
+	border-radius: 1vh;
+	font-size: 4vh;
+	text-align: center;
+	border: none;
+}
+
+.test .formulaireContainer .newsletter{
+	margin-top: 3vh;
+	color: rgb(139,161,213);
+	background-color: rgb(59,92,170);
+	width: 40vh;
+	height: 5vh;
+	border-radius: 1vh;
+	font-size: 3.8vh;
+	text-align: center;
+	border: none;
+}
+.test .formulaireContainer .newsletter label{
+	position: relative;
+	color: rgb(255,213,79);
+	background-color: rgb(59,92,170);
+	width: 45vh;
+	height: 25vh;
+	margin-top:3vh;
+	padding-top: 0.5vh;
+	font-family: 'LemonMilk';
+	border-radius: 10px;
+	font-size: 12px;
+	border: none;
+	max-height: 43px;
+
+}
+
+
+.test input[type="checkbox"]{
+	position: absolute;
+
+	bottom:10vh;
+	width: 3vh;
+	height: 3vh;
+}
+
+#valider, #creeCompte{
+	margin-top:2vh;
+	margin-bottom: 2.5vh;
+    padding: 1vh;
+	font-family: 'LemonMilk';
+	border-radius: 10px;
+	font-size: 3vh;
+	color: rgb(255,213,79);
+	background-color: rgb(59,92,170);
+	border: none;
+	text-decoration: none;
+}
+
+.test [name='envoye']{
+	margin-top: 2vh;
+	color: rgb(139,161,213);
+	background-color: rgb(59,92,170);
+	width: 20vh;
+	height: 5vh;
+	border-radius: 1vh;
+	font-size: 4vh;
+	text-align: center;
+	border: none;
+
+}
+#valider:hover{
+	background-color: rgb(255,213,79);
+	color: rgb(59,92,170);
+	cursor: pointer;
+	border: 1px solid grey;
+}
+.test form [name='retour']{
+	margin-top: 5vh;
+	background-color: rgb(59,92,170);
+	width: 15vh;
+	height: 5vh;
+	border-radius: 1vh;
+	font-size: 3vh;
+	text-align: center;
+	border: none;
+	font-family: 'LemonMilk';
+	color: rgb(255,213,79);
+	text-decoration: none;
+}
+.test [name='retour_ins']{
+	margin-top: 0.001vh;
+	color: rgb(139,161,213);
+	background-color: rgb(59,92,170);
+	width: 17vh;
+	height: 5vh;
+	border-radius: 1vh;
+	font-size: 3vh;
+	text-align: center;
+	border: none;
+	font-family: 'LemonMilk';
+	color: rgb(255,213,79);
+	text-decoration: none;
+}
+#retour:hover{
+	background-color:rgb(255,213,79);
+	color: rgb(59,92,170);
+	cursor: pointer;
+	border: 1px solid grey;
+}
+#retour_ins:hover{
+	background-color:rgb(255,213,79);
+	color: rgb(59,92,170);
+	cursor: pointer;
+	border: 1px solid grey;
+}
+#creeCompte:hover{
+	background-color: rgb(255,213,79);
+	color: rgb(59,92,170);
+	cursor: pointer;
+	border: 1px solid grey;
+}

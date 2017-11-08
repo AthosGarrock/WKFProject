@@ -1,0 +1,39 @@
+MANA :
+lemon/milk regular 21pt
+rgb : 8, 132, 144
+
+OMBRE MANA :
+lemon/milk regular 21pt
+rgb : 0, 96, 100
+
+TITRE :
+JosefinSans Bold + regular 12pt
+rgb : white
+
+DEFENSE :
+JosefinSans Bold 18pt
+rgb : white
+contour : rgb : 183, 31, 30
+
+
+ATTAQUE :
+JosefinSans Bold 18pt
+rgb : white
+contour : rgb : 249, 177, 20
+
+TEXTE :
+JosefinSans regular 8pt
+rgb : white
+
+
+code pour le contour : 
+
+text-shadow:
+ 2px 0 0 black,
+ 0 2px 0 black,
+ 0 -2px 0 black,
+ -2px 0 0 black,
+ 2px 2px 0 black,
+ 2px -2px 0 black,
+ -2px 2px 0 black,
+ -2px -2px 0 black;
