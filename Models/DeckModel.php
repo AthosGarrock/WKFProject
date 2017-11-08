@@ -61,16 +61,12 @@ class DeckModel extends CoreModel
 	}
 
 /**
-* @return all decks arrays if $user is null. Else return all user decks arrays.
+* @return all decks arrays if $account_id is null. Else return all user decks arrays.
 */
 	public function getAll($account_id = NULL){
-		$req = is_null($account_id)?('SELECT * FROM decks'):('SELECT * FROM decks WHERE account_id = :account_id');
-		$param = [];
-		if (!is_null($user)) {
-			$param = [':account_id' => $account_id];
-		}
-		
-		
+		$req = is_null($account_id)? ('SELECT * FROM decks'):('SELECT * FROM decks WHERE account_id = :account_id');
+		$param = is_null($account_id)? NULL:[':account_id' => $account_id];
+
 		return $this->MakeSelect($req, $param);
 	}
 
