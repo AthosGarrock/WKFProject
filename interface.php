@@ -1,10 +1,5 @@
 <?php 
 session_start();
-if(isset($_SESSION))
-{
-	var_dump($_SESSION);
-}
-
 
 if( !empty($_SESSION['user1']) AND empty($_SESSION['user2']) )
 {
@@ -20,24 +15,17 @@ else
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-		<style>
+	<head>
+		<title>Selection de héros</title>
+		<style>@import url("assets/css/interface.css") all;</style>
+	</head>
 
-		@import url("assets/css/interface.css") all;
-
-	</style>
-</head>
 <body>
-
 	<header>
 		<div class="header_content">
 			<img class="main_logo" src="assets/images/Logo.png" alt="logo">
 		</div>
-
-		<p class="interface_propagande">
-			Choisis ton héros !
-		</p>
+		<p class="interface_propagande">Choisis ton héros !</p>
 	</header>
 
 	<main>
@@ -67,4 +55,5 @@ else
 	</footer>
 
 </body>
+
 </html>

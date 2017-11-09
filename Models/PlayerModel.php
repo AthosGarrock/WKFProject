@@ -6,14 +6,6 @@ require_once 'CoreModel.class.php';
 */
 class PlayerManager extends CoreManager
 {
-	private static $_pm_instance = NULL;
-
-//SINGLETON PATTERN
-	public static function getInstance(){
-		if(is_null(self::$_am_instance))
-			self::$_am_instance = new PlayerManager();
-		return self::$_am_instance;
-	}
 //NOUVEAU JOUEUR
 	public function add(array $data){
 

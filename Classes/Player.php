@@ -6,7 +6,7 @@ class Player
 	private $_p_def;
 	private $_p_mana;
 	private $_p_hand = [];
-	private $_p_field = [];
+	private $_p_deck = [];
 	private $_p_deck_fk = [];
 	private $_p_account_fk;
 

@@ -1,27 +1,26 @@
 <?php 
 
-require_once 'CoreModel.php';
-require('DeckModel.php');
-require('CardModel.php');
-require('LibraryModel.php');
-require('../Classes/Library.php');
+require_once('Models/CoreModel.php');
+require_once('Models/DeckModel.php');
+require_once('Models/CardModel.php');
+require_once('Models/LibraryModel.php');
+require_once('Classes/Library.php');
 
 /**
 * 
 */
 class AccountModel extends CoreModel
 {
-	private static $_am_instance = NULL;
 	private $_dm;
 	private $_lm;
 	private $_cm;
 
 	//Récupère les managers pour la fonction generateDeck
-		public function __construct(){
+		private function __construct(){
 			parent::__construct();
-			$this->_dm = DeckModel::getInstance();
-			$this->_lm = LibraryModel::getInstance();
-			$this->_cm = CardModel::getInstance();
+			$this->_dm = new DeckModel();
+			$this->_lm = new LibraryModel();
+			$this->_cm = new CardModel();
 		}
 
 		public function getDeckModel()
@@ -29,13 +28,6 @@ class AccountModel extends CoreModel
 			return $this->_dm;
 		}
 
-
-	//SINGLETON PATTERN
-		public static function getInstance(){
-			if(is_null(self::$_am_instance))
-				self::$_am_instance = new AccountModel();
-			return self::$_am_instance;
-		}
 	//NOUVEAU JOUEUR
 		public function add(array $data){
 			$req = ('INSERT INTO account(a_firstname, a_lastname, a_username, a_email, a_password, a_newsletter) 
@@ -113,7 +105,6 @@ class AccountModel extends CoreModel
 			$values = [	':a_id' => $id ];
 
 			$this->makeStatement($req, $values);
-
 		}
 
 	/**
@@ -124,7 +115,14 @@ class AccountModel extends CoreModel
 
 			$param = [':a_username' => $name];
 
-			return $this->makeSelect($req, $param);
+			//Result is in array due to FetchAll function. If a result is found...
+				if($account = $this->makeSelect($req, $param)){
+					// ...Return an Account item.
+					return new Account($account[0]);
+				}
+				else
+					return false;
+
 		}
 
 	/**
@@ -137,5 +135,8 @@ class AccountModel extends CoreModel
 
 
 }
+
+$AM = new AccountModel;
+var_dump($AM);
 
  ?>
