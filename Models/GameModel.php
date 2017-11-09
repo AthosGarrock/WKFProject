@@ -5,14 +5,6 @@ require_once 'CoreModel.php';
 */
 class GameModel extends CoreModel
 {
-	private static $_gm_instance = NULL;
-
-//SINGLETON PATTERN
-	public static function getInstance(){
-		if(is_null(self::$_gm_instance))
-			self::$_gm_instance = new AccountManager();
-		return self::$_gm_instance;
-	}
 //NOUVELLE PARTIE
 	public function add($p1, $p2){
 		$req = ('INSERT INTO game(g_player1_fk, g_player2_fk) VALUES :g_player1_fk, :g_player2_fk,');

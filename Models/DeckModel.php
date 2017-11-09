@@ -1,21 +1,13 @@
 <?php 
 
-require_once 'CoreModel.php';
+require_once 'Models/CoreModel.php';
+require_once 'Classes/Deck.php';
 /**
 * 
 */
 class DeckModel extends CoreModel
 {
 	
-	private static $_dm_instance = NULL;
-
-//SINGLETON PATTERN
-	public static function getInstance(){
-		if(is_null(self::$_dm_instance))
-			self::$_dm_instance = new DeckModel();
-		return self::$_dm_instance;
-	}
-
 //NOUVEAU DECK
 	public function add($a_id, $d_hero_fk = NULL){
 		$req = ('INSERT INTO deck(d_account_fk, d_hero_fk) VALUES (:d_account_fk, :d_hero_fk)');
@@ -76,8 +68,8 @@ class DeckModel extends CoreModel
 
 		$params = 	['id_user' => $id_user,
 					 'id_hero' => $id_hero];
-		//Return array of deck arrays. Returns array([deck a], ..., [deck n])
-		return $this->MakeSelect($sql, $params);
+		//Return Deck item
+		return new Deck($this->MakeSelect($sql, $params)[0]);
 	}
 
 }

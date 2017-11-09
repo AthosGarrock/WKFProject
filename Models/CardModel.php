@@ -6,14 +6,6 @@ require_once 'CoreModel.php';
 */
 class CardModel extends CoreModel
 {
-	private static $_cm_instance = NULL;
-
-//SINGLETON PATTERN
-	public static function getInstance(){
-		if(is_null(self::$_cm_instance))
-			self::$_cm_instance = new CardModel();
-		return self::$_cm_instance;
-	}
 
 //NOUVELLE CARTE
 	public function add(Library $data, $a_id, $d_id = NULL){
@@ -86,6 +78,18 @@ class CardModel extends CoreModel
 		$req = ('SELECT * FROM modele');
 		return $this->MakeSelect($req);
 	}
+
+/**
+* @return ARRAY with card arrays.
+*/
+	public function getByDeck($d_id){
+		$req = ('SELECT * FROM modele WHERE c_deck_fk = :d_id');
+		$param = [':d_id'=> $d_id];
+
+		return $this->MakeSelect($req, $param);
+	}
+
+
 
 	public function attack(Card $atk, Card $target, LibraryModel $mm){
 

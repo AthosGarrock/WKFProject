@@ -6,14 +6,6 @@ require_once 'CoreModel.php';
 */
 class LibraryModel extends CoreModel
 {
-	private static $_lm_instance = NULL;
-
-//SINGLETON PATTERN
-	public static function getInstance(){
-		if(is_null(self::$_lm_instance))
-			self::$_lm_instance = new LibraryModel;
-		return self::$_lm_instance;
-	}
 
 //NOUVEAU MODELE
 	public function add($titre, $surnom, $equipe, $type, $mana, $atk, $def){
