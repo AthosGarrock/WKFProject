@@ -41,11 +41,11 @@
 
 		//Login Form
 			if (!empty($_GET['form_conn']) AND ($_GET['form_conn']=='oui')){
-				include 'form_connect.php';
+				include 'includes/form_connect.php';
 			}
 		//Subscribe Form
 			elseif(!empty($_GET['creerCompte']) AND $_GET['creerCompte']=='true'){
-				include 'form_inscr.php';
+				include 'includes/form_inscr.php';
 			}
 		//Retour à la page
 			if( (!empty($_GET['retour']) AND $_GET['retour']=='true' )){

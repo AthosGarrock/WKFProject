@@ -64,7 +64,7 @@ class CardModel extends CoreModel
 * @return new Card
 */
 	public function get($c_id){
-		$req = ('SELECT * FROM modele WHERE titre = :titre');
+		$req = ('SELECT * FROM card WHERE titre = :titre');
 
 		$param = [':titre' => $c_id];
 
@@ -75,7 +75,7 @@ class CardModel extends CoreModel
 * @return ARRAY with ALL CARD ARRAYS.
 */
 	public function getAll(){
-		$req = ('SELECT * FROM modele');
+		$req = ('SELECT * FROM card');
 		return $this->MakeSelect($req);
 	}
 
@@ -83,7 +83,7 @@ class CardModel extends CoreModel
 * @return ARRAY with card arrays.
 */
 	public function getByDeck($d_id){
-		$req = ('SELECT * FROM modele WHERE c_deck_fk = :d_id');
+		$req = ('SELECT * FROM card WHERE c_deck_fk = :d_id');
 		$param = [':d_id'=> $d_id];
 
 		return $this->MakeSelect($req, $param);
@@ -91,19 +91,32 @@ class CardModel extends CoreModel
 
 
 
-	public function attack(Card $atk, Card $target, LibraryModel $mm){
+	public function attack(Card $atk, Object $target, LibraryModel $lm, CoreModel $model){
 
 		//On récupère l'attaque :
-		//$attack = $mm->get(model_id)->getMAttack;
-		$attack = $mm->get($atk->getCModFk())->getMAttack();
-		//On récupère la défense restante de la cible :
-		$def = $target->getCDef();
+		//$attack = $lm->get(m_id)->getMAttack;
+		$attack = $lm->get($atk->getCModFk())->getMAttack();
 
-		//Application des dommages
-		$target->setCDef($def - $atk);
+		if ($target instanceof Card) {
+			//On récupère la défense restante de la cible :
+				$def = $target->getCDef();
 
-		$this->update($target);
+				//Application des dommages
+				$target->setCDef($def - $atk);
+				$this->update($target);
+		}
+		elseif ($target instanceof Player) {
+			//On récupère la défense restante de la cible :
+				$def = $target->getPDef();
 
+				//Application des dommages
+				$target->setPDef($def - $atk);
+				$this->update($target);
+		}
+		else{
+			echo "<span class='error'>Cible invalide.</span>";
+			return false;
+		}
 	}
 
 }

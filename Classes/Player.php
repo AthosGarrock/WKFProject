@@ -5,9 +5,9 @@ class Player
 	private $_p_id;
 	private $_p_def;
 	private $_p_mana;
-	private $_p_hand = [];
-	private $_p_deck = [];
-	private $_p_deck_fk = [];
+	private $_p_hand;
+	private $_p_deck;
+	private $_p_deck_fk;
 	private $_p_account_fk;
 
 	function __construct(array $player)
@@ -74,27 +74,25 @@ class Player
 
         return $this;
     }
-
     /**
      * @return mixed
      */
-    public function getPField()
+    public function getPHand()
     {
-        return $this->_p_field;
+        return $this->_p_hand;
     }
 
     /**
-     * @param mixed $_p_field
+     * @param mixed $_p_hand
      *
      * @return self
      */
-    public function setPField($_p_field)
+    public function setPHand($_p_hand)
     {
-        $this->_p_field = $_p_field;
+        $this->_p_hand = $_p_hand;
 
         return $this;
     }
-
     /**
      * @return mixed
      */
@@ -114,9 +112,6 @@ class Player
 
         return $this;
     }
-
-
-
     /**
      * @return mixed
      */
@@ -136,6 +131,26 @@ class Player
 
         return $this;
     }
+    /**
+     * @return mixed
+     */
+    public function getPDeckFk()
+    {
+        return $this->_p_deck_fk;
+    }
+
+    /**
+     * @param mixed $_p_deck_fk
+     *
+     * @return self
+     */
+    public function setPDeckFk($_p_deck_fk)
+    {
+        $this->_p_deck_fk = $_p_deck_fk;
+
+        return $this;
+    }
+
 
 //Special Functions
 	//HYDRATION

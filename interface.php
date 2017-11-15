@@ -1,17 +1,14 @@
 <?php 
-session_start();
+	session_start();
 
-if( !empty($_SESSION['user1']) AND empty($_SESSION['user2']) )
-{
-	$lien_selection_deck1 = 'Controllers/selection_deck.php?id_hero=1';
-	$lien_selection_deck2 = 'Controllers/selection_deck.php?id_hero=2';
-}
-else
-{
-	$lien_selection_deck1 = 'Board.php';
-	$lien_selection_deck2 = 'Board.php';
-}
-
+	if( !empty($_SESSION['user1']) AND empty($_SESSION['user2']) ){
+		$lien_selection_deck1 = 'Traitements/selection_deck.php?id_hero=1';
+		$lien_selection_deck2 = 'Traitements/selection_deck.php?id_hero=2';
+	}
+	else{
+		$lien_selection_deck1 = 'Board.php';
+		$lien_selection_deck2 = 'Board.php';
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -51,7 +48,6 @@ else
 
 			<a href="#" class="logo_resaux_sociaux"><img src="assets\images\logo_youtube2.png" alt="youtube logo"></a>
 		</div>
-
 	</footer>
 
 </body>
